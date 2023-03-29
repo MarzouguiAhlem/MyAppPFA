@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, TextInput, Pressable, StyleSheet, Text} from 'react-native';
 
-const IdMedecin = () => {
+const Id = () => {
   const [number, setNumber] = useState();
 
   const handleSubmit = () => {
@@ -58,4 +58,4 @@ const styles = StyleSheet.create({
     },
   });
 
-export default IdMedecin;
+export default Id;

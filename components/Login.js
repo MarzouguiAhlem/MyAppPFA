@@ -14,7 +14,9 @@ export default function LoginPage() {
       alert('Please enter both email and password');} 
       else if (!/\S+@\S+\.\S+/.test(Email)) {
         alert('Please enter a valid email address');}
-      else alert('You are now connected!');}
+      else {alert('You are now connected!');
+      console.log(Email);
+      console.log(password);}}
   
   return (
     <View style={styles.container}>

@@ -8,6 +8,10 @@ const SignUp = () => {
   const [number, setNumber] = useState();
 
   const handleSignup = () => {
+    console.log(name);
+    console.log(email);
+    console.log(password);
+    console.log(number);
   };
 
   return (
