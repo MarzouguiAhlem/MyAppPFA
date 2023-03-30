@@ -67,12 +67,14 @@ const styles = StyleSheet.create({
   },
   inputText: {
     flex: 1,
-    height: 40,
+    height: 50,
     color: 'white',
     backgroundColor: '#14082b',
     paddingHorizontal: 10,
     borderRadius: 20,
     marginRight: 10,
+    borderWidth: 2,
+    borderColor: '#c2bccf',
   },
   background: {
     flex: 1,

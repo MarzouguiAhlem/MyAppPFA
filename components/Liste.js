@@ -20,7 +20,7 @@ export default function Liste  () {
   return (
     <ImageBackground
       style={menuStyles.background}
-      source={require('./img/back4.png')}
+      source={require('./img/back7.jpg')}
     >
       <View style={menuStyles.container}>
       <FlatList
@@ -47,16 +47,18 @@ const menuStyles = StyleSheet.create({
   
   },
   itemText: {
-    color: '#c2bccf',
+    color: '#14082b',
     fontSize: 20,
     fontWeight: 'bold',
     textAlign: 'center', 
   },
   button: {
-  //backgroundColor: 'white',
-    borderRadius: 10,
+    backgroundColor: 'white',
+    borderRadius: 8,
     padding: 10,
-    marginHorizontal: 5,
+    marginHorizontal: 10,
+    borderWidth: 2,
+    borderColor: 'white',
   },
   background: {
     flex: 1,

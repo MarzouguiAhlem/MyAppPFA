@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, TextInput, Pressable, View } from 'react-native';
+import { StyleSheet, Text, TextInput, View, TouchableOpacity } from 'react-native';
 
 const SignUp = () => {
   const [name, setName] = useState('');
@@ -61,10 +61,10 @@ const SignUp = () => {
         color="white"
         required={true}
       />
-       <Pressable style={styles.button} mode="contained" onPress={handleSignup}>
-      <Text style={styles.text}>Create Account</Text>
-      </Pressable>
-   
+
+      <TouchableOpacity style={styles.button} mode="contained" onPress={handleSignup}>
+        <Text style={styles.text}>Create Account</Text>
+      </TouchableOpacity>
     </View>
   );
 };
@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
   },
   input: {
     width: '100%',
-    borderRadius: 8,
+    borderRadius: 5,
     borderWidth: 1,
     borderColor: '#c2bccf',
     height: 42,

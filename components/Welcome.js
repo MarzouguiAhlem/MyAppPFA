@@ -1,14 +1,18 @@
 import React from 'react';
-import { View, Text, StyleSheet, Pressable} from 'react-native';
+import { View, Text, StyleSheet, Pressable, TouchableOpacity, ImageBackground} from 'react-native';
 
 
 
 export default function Welcome({onPress, onPressLeft, onPressRight}) {
   
   return (
-    <View style={styles.container}>
+    <ImageBackground
+      style={styles.background}
+      source={require('./img/back12.jpg')}
+    >
+     <View style={styles.container}>
       <Text style={styles.regularText}>
-      Welcome TO MyHealthMate  ...
+      Welcome To MyHealthMate  ...
       </Text>
 
       <Pressable
@@ -19,8 +23,8 @@ export default function Welcome({onPress, onPressLeft, onPressRight}) {
           borderRadius: 10,
           flexDirection: "row",
           padding: 10,
-          height: 48,
-          width: '50%',
+          height: 45,
+          width: '57%',
           alignItems: 'center',
           justifyContent: 'center',
         },
@@ -31,28 +35,32 @@ export default function Welcome({onPress, onPressLeft, onPressRight}) {
 
     <View style={styles.container1}>
       
-      <Pressable style={styles.button} onPress={onPressLeft}>
+  
+      <TouchableOpacity onPress={onPressLeft} style={styles.button}>
         <Text style={styles.text}>Log In</Text>
-      </Pressable>
-      <Pressable style={styles.button} onPress={onPressRight}>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={onPressRight} style={styles.button}>
         <Text style={styles.text}>Sign Up</Text>
-      </Pressable>
+      </TouchableOpacity>
       
     </View>  
     
     </View>
+       
+    </ImageBackground>
+   
   );
   
 }
 const styles = StyleSheet.create({
   container: {
-    flex: 0.4,
+    flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
     
   },
   container1: {
-    flex: 1,
+    flex: 0.2,
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'row',
@@ -61,20 +69,26 @@ const styles = StyleSheet.create({
     fontSize: 24,
     padding: 20,
     marginVertical: 8,
-    color: 'white',
+    color: '#14082b',
     textAlign: 'center',
   },
   button: {
-    backgroundColor: '#2196F3',
+    backgroundColor: '#444',
     borderRadius: 10,
-    padding: 10,
-    margin: 10,
-    height: 48,
+    padding: 8,
+    margin: 8,
+    height: 45,
     width: '25%',
+    //borderWidth: 2,
+    //borderColor: '#c2bccf',
   },
   text: {
     color: 'white',
     textAlign: 'center',
     fontSize: 18,
+  },
+  background: {
+    flex: 1,
+    resizeMode: 'cover', // or 'stretch'
   },
 });

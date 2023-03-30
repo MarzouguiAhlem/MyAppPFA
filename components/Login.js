@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Pressable, StyleSheet, Text, View, TextInput } from 'react-native';
+import { TouchableOpacity, StyleSheet, Text, View, TextInput, ImageBackground } from 'react-native';
 
 
 
@@ -19,12 +19,16 @@ export default function LoginPage() {
       console.log(password);}}
   
   return (
-    <View style={styles.container}>
+    <ImageBackground
+      style={styles.background}
+      source={require('./img/back11.jpg')}
+    >
+<View style={styles.container}>
       <Text style={styles.title}>Welcome back !</Text>
       <TextInput
         style={styles.input}
         placeholder="Email address"
-        placeholderTextColor="gray"
+        placeholderTextColor="white"
         value={Email}
         textContentType="emailAddress"
         onChangeText={setEmail}
@@ -35,7 +39,7 @@ export default function LoginPage() {
       <TextInput
         style={styles.input}
         placeholder="Password"
-        placeholderTextColor="gray"
+        placeholderTextColor="white"
         value={password}
         onChangeText={setPassword}
         secureTextEntry
@@ -43,46 +47,52 @@ export default function LoginPage() {
         required={true}
       />
       
-<Pressable
-  onPress={handleSubmit}
-  style={{borderRadius: 10,
-    backgroundColor: "#3498db",
+    
+<TouchableOpacity onPress={handleSubmit} style={{borderRadius: 10,
+    backgroundColor: "white",
     flexDirection: "row",
-    justifyContent: "center",
-    padding: 10,
-    height: 48,
-    width: '80%',
+    padding: 5,
+    height: 40,
+    width: '25%',
     alignItems: 'center',
-    justifyContent: 'center',}
+    justifyContent: 'center',
+    margin: 10,
   }
->
-  <Text style={{ color: 'white', fontSize: 20 }}>Log in</Text>
-</Pressable>
+  }>
+      <Text style={{ color: '#14082b', fontSize: 18, fontWeight:'bold' }}>Login</Text>
+  </TouchableOpacity>
     </View>
+    </ImageBackground>
+    
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: '#14082b',
+    //alignItems: 'center',
+    //justifyContent: 'center',
+    //backgroundColor: '#14082b',
   },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
-    marginBottom: 24,
+    margin: 14,
     color: 'white',
   },
  
   input: {
     width: '80%',
     height: 48,
-    borderWidth: 1,
-    borderColor: '#c2bccf',
+    borderWidth: 1.5,
+    borderColor: 'white',
     borderRadius: 4,
     paddingLeft: 16,
-    marginBottom: 16,
+    margin: 10,
+  
+  },
+  background: {
+    flex: 1,
+    resizeMode: 'cover', // or 'stretch'
   },
 });

@@ -6,7 +6,7 @@ const ChatBox = () => {
   const [newMessage, setNewMessage] = useState('');
 
   const handleSend = () => {
-    setMessages([...messages, { text: newMessage, sent: false }]);
+    setMessages([...messages, { text: newMessage, sent: true }]);
     setNewMessage('');
   };
 
@@ -25,12 +25,12 @@ const ChatBox = () => {
     />
     <View style={{ flexDirection: 'row', alignItems: 'center'}}>
       <TextInput
-        style={{ flex: 1, height: 40, backgroundColor:'white', borderColor: 'gray', borderWidth: 1, margin: 10, borderRadius: 8, padding: 10 }}
+        style={{ flex: 1, height: 40, backgroundColor:'white', borderColor: 'gray', borderWidth: 2, margin: 10, borderRadius: 8, padding: 10 }}
         placeholder="Type your message here"
         onChangeText={(text) => setNewMessage(text)}
         value={newMessage}
       />
-      <Pressable onPress={handleSend} style={{backgroundColor: '#c2bccf',borderRadius: 10, padding: 5, margin: 5, height: 38, width: '15%'}}><Text style={{color: 'black', fontSize: 18}}>Send</Text></Pressable>
+      <Pressable onPress={handleSend} style={{backgroundColor: '#c2bccf',borderRadius: 10, padding: 5, margin: 5, height: 38, width: '15%'}}><Text style={{color: '#14082b', fontSize: 18, fontWeight: 'bold'}}>Send</Text></Pressable>
       
     </View>
   </View>

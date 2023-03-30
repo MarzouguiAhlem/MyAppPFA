@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, TextInput, Pressable, StyleSheet, Text} from 'react-native';
+import { View, TextInput, TouchableOpacity, StyleSheet, Text} from 'react-native';
 
 const Id = () => {
   const [number, setNumber] = useState();
@@ -21,8 +21,8 @@ const Id = () => {
         required={true}
       />
       
-    <Pressable
-  onPress={handleSubmit}
+
+<TouchableOpacity onPress={handleSubmit}
   style={{borderRadius: 10,
     backgroundColor: "#3498db",
     flexDirection: "row",
@@ -32,10 +32,9 @@ const Id = () => {
     width: '80%',
     alignItems: 'center',
     justifyContent: 'center',}
-  }
->
-  <Text style={{ color: 'white', fontSize: 20 }}>Submit</Text>
-</Pressable>
+  }>
+      <Text style={{ color: 'white', fontSize: 20 }}>Submit</Text>
+  </TouchableOpacity>
     </View>
   );
 };
