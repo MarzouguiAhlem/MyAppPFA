@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, StyleSheet, FlatList } from 'react-native';
+import { View, Text, TextInput, StyleSheet, FlatList,ImageBackground } from 'react-native';
 
 function Input() {
   const [messages, setMessages] = useState([]);
@@ -17,7 +17,11 @@ function Input() {
   );
 
   return (
-    <View style={styles.container}>
+    <ImageBackground
+      style={styles.background}
+      source={require('./img/back4.png')}
+    >
+     <View style={styles.container}>
       <FlatList
         data={messages}
         renderItem={renderItem}
@@ -26,20 +30,23 @@ function Input() {
       <View style={styles.inputContainer}>
         <TextInput
           style={styles.inputText}
-          placeholder="Type a message..."
+          placeholder="Type a text..."
+          placeholderTextColor={"white"}
           value={text}
           onChangeText={setText}
           onSubmitEditing={handleSend}
         />
       </View>
     </View>
+    </ImageBackground>
+    
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F5FCFF',
+    //backgroundColor: '#F5FCFF',
   },
   messageContainer: {
     padding: 10,
@@ -56,15 +63,20 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingHorizontal: 10,
     paddingVertical: 5,
-    backgroundColor: '#DDD',
+    //backgroundColor: '#DDD',
   },
   inputText: {
     flex: 1,
     height: 40,
-    backgroundColor: '#FFF',
+    color: 'white',
+    backgroundColor: '#14082b',
     paddingHorizontal: 10,
     borderRadius: 20,
     marginRight: 10,
+  },
+  background: {
+    flex: 1,
+    resizeMode: 'cover', // or 'stretch'
   },
 });
 
