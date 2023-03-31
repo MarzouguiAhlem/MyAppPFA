@@ -8,13 +8,32 @@ import Id from './components/Id';
 import Liste from './components/Liste';
 import Submit from './components/Submit';
 import Input from './components/Input';
-import ChatBox from './components/ChatBox';
+import ChatBox1 from './components/ChatBox1';
+
+
+import Logout from './components/Liste/Logout';
+import Allergies from './components/Liste/Allergies';
+import Specialties from './components/Liste/Specialties';
+//import ChatBox from './components/Liste/ChatBox';
+//import Diseases from './components/Liste/Diseases';
+//import Allergies from './components/Liste/Allergies';
+//import Specialties from './components/Liste/Specialties';
+//import Vaccination from './components/Liste/Vaccination';
+//import Medicines from './components/Liste/Medicines';
+//import Instructions from './components/Liste/Instructions';
+//import FilesImportation from './components/Liste/FilesImportation';
+//import Doctors from './components/Liste/Doctors';
+//import BasicInformation from './components/Liste/BasicInformaton';
+
+
+
+
 
 export default function App() {
   return (
     <><View style={styles.container}>
       <Header/>
-      <Id/>
+      <Specialties/>
     </View>
     <View style={styles.footerContainer}>
         <Footer/>
