@@ -6,7 +6,7 @@ const ChatBox = () => {
   const [newMessage, setNewMessage] = useState('');
 
   const handleSend = () => {
-    setMessages([...messages, { text: newMessage, sent: true }]);
+    setMessages([...messages, { text: newMessage, sent: false }]);
     setNewMessage('');
   };
 

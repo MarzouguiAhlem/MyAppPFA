@@ -2,7 +2,6 @@ import React from 'react';
 import { View, Text, StyleSheet, Pressable, TouchableOpacity, ImageBackground} from 'react-native';
 
 
-
 export default function Welcome({onPress, onPressLeft, onPressRight}) {
   
   return (

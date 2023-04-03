@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { TouchableOpacity, StyleSheet, Text, View, TextInput, ImageBackground } from 'react-native';
-
+import { RadioButton } from 'react-native-paper';
 
 
 export default function LoginPage() {
@@ -18,6 +18,8 @@ export default function LoginPage() {
       console.log(Email);
       console.log(password);}}
   
+      const [checked, setChecked] = useState('');
+
   return (
     <ImageBackground
       style={styles.background}
@@ -46,9 +48,16 @@ export default function LoginPage() {
         color="white"
         required={true}
       />
+
+<RadioButton.Group onValueChange={newValue => setChecked(newValue)} value={checked}>
+        <RadioButton.Item label="Patient" value="first" color={'white'} labelStyle={{color:'white', fontSize:18}}
+        uncheckedColor={'#e0e0e0'}/>
+        <RadioButton.Item label="Doctor" value="second" labelStyle={{color:'white', fontSize:18}} color={'white'}
+        uncheckedColor={'#e0e0e0'}/>
+  </RadioButton.Group>
       
     
-<TouchableOpacity onPress={handleSubmit} style={{borderRadius: 10,
+<TouchableOpacity onPress={handleSubmit} style={{borderRadius: 5,
     backgroundColor: "white",
     flexDirection: "row",
     padding: 5,
@@ -56,7 +65,7 @@ export default function LoginPage() {
     width: '25%',
     alignItems: 'center',
     justifyContent: 'center',
-    margin: 10,
+    margin: 5,
   }
   }>
       <Text style={{ color: '#14082b', fontSize: 18, fontWeight:'bold' }}>Login</Text>
@@ -77,10 +86,9 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 24,
     fontWeight: 'bold',
-    margin: 14,
+    margin: 10,
     color: 'white',
   },
- 
   input: {
     width: '80%',
     height: 48,
@@ -88,7 +96,7 @@ const styles = StyleSheet.create({
     borderColor: 'white',
     borderRadius: 4,
     paddingLeft: 16,
-    margin: 10,
+    margin: 5,
   
   },
   background: {

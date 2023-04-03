@@ -12,15 +12,17 @@ import ChatBox1 from './components/ChatBox1';
 
 
 import Logout from './components/Liste/Logout';
+import Diseases from './components/Liste/Diseases';
 import Allergies from './components/Liste/Allergies';
 import Specialties from './components/Liste/Specialties';
-//import ChatBox from './components/Liste/ChatBox';
+import FilesImportation from './components/Liste/FilesImportation';
+import Chatbox from './components/Liste/Chatbox';
 //import Diseases from './components/Liste/Diseases';
 //import Allergies from './components/Liste/Allergies';
 //import Specialties from './components/Liste/Specialties';
 //import Vaccination from './components/Liste/Vaccination';
-//import Medicines from './components/Liste/Medicines';
-//import Instructions from './components/Liste/Instructions';
+import Medicines from './components/Liste/Medicines';
+import Instructions from './components/Liste/Instructions';
 //import FilesImportation from './components/Liste/FilesImportation';
 //import Doctors from './components/Liste/Doctors';
 //import BasicInformation from './components/Liste/BasicInformaton';
@@ -33,7 +35,7 @@ export default function App() {
   return (
     <><View style={styles.container}>
       <Header/>
-      <Specialties/>
+      <Logout/>
     </View>
     <View style={styles.footerContainer}>
         <Footer/>
@@ -46,6 +48,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+
     backgroundColor: '#14082b',
   },
   footerContainer: { backgroundColor: '#14082b' },

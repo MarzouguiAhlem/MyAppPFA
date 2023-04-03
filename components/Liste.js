@@ -20,7 +20,7 @@ export default function Liste  () {
   return (
     <ImageBackground
       style={menuStyles.background}
-      source={require('./img/back7.jpg')}
+      //source={require('./img/back7.jpg')}
     >
       <View style={menuStyles.container}>
       <FlatList
