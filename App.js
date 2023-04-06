@@ -11,7 +11,6 @@ import Input from './components/Input';
 import ChatBox1 from './components/ChatBox1';
 
 
-import Logout from './components/Liste/Logout';
 import Diseases from './components/Liste/Diseases';
 import Allergies from './components/Liste/Allergies';
 import Specialties from './components/Liste/Specialties';
@@ -35,7 +34,7 @@ export default function App() {
   return (
     <><View style={styles.container}>
       <Header/>
-      <Logout/>
+      <Input/>
     </View>
     <View style={styles.footerContainer}>
         <Footer/>

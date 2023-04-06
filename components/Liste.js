@@ -4,8 +4,8 @@ import { View, Text, StyleSheet, FlatList, TouchableOpacity, ImageBackground} fr
 
 export default function Liste  () {
   
-  const Items = [{name:'Basic information'}, {name:'Diseases'}, {name:'Allergies'}, {name:'Specialties'}, 
-  {name:'Vaccination'},{name:'Doctors'},{name:'Instuctions to follow'},{name:'Medicines'},
+  const Items = [{name:'Basic information'}, {name:'Diseases'}, {name:'Allergies'}, {name:'Vaccination'}, 
+  {name:'Specialties'},{name:'Doctors'},{name:'Instuctions to follow'},{name:'Medicines'},
   {name:'Files importation'},{name:'ChatBox'},{name:'Logout'},];
 
   const renderItem = ({ item }) => <Item name={item.name} />;
@@ -20,7 +20,7 @@ export default function Liste  () {
   return (
     <ImageBackground
       style={menuStyles.background}
-      //source={require('./img/back7.jpg')}
+      source={require('./img/back7.jpg')}
     >
       <View style={menuStyles.container}>
       <FlatList

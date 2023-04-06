@@ -12,7 +12,7 @@ const ChatBox = () => {
 
   return (
     <ImageBackground style={{flex: 1, resizeMode: 'cover'}}
-    //source={require('../img/doc.webp')} 
+    source={require('../img/doc.webp')} 
     >
     <View style={{ flex: 1, backgroundColor:'white' }}>
     <FlatList
