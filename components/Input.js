@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, StyleSheet, FlatList,ImageBackground } from 'react-native';
+import { View, Text, TextInput, StyleSheet, FlatList } from 'react-native';
 
 function Input() {
   const [messages, setMessages] = useState([]);
@@ -17,10 +17,6 @@ function Input() {
   );
 
   return (
-    <ImageBackground
-      style={styles.background}
-      source={require('./img/back4.png')}
-    >
      <View style={styles.container}>
       <FlatList
         data={messages}
@@ -38,7 +34,6 @@ function Input() {
         />
       </View>
     </View>
-    </ImageBackground>
     
   );
 }
@@ -76,10 +71,7 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: '#c2bccf',
   },
-  background: {
-    flex: 1,
-    resizeMode: 'cover', // or 'stretch'
-  },
+ 
 });
 
 export default Input;

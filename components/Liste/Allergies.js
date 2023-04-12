@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, TextInput, TouchableOpacity, StyleSheet, Text, ImageBackground } from 'react-native';
+import { View, TextInput, TouchableOpacity, StyleSheet, Text } from 'react-native';
 
 const Allergies = () => {
   const [text, setText] = useState('');
@@ -14,10 +14,6 @@ const Allergies = () => {
   };
 
   return (
-    <ImageBackground
-      style={style.background}
-      source={require('./img/back5.jpg')}
-    >
      <View style={style.container}>
       <TextInput
        multiline={true}
@@ -32,9 +28,7 @@ const Allergies = () => {
       </TouchableOpacity>
       
     </View>
-    </ImageBackground>
-    
-  );
+);
 };
 const style = StyleSheet.create({
   container: {
@@ -65,10 +59,6 @@ const style = StyleSheet.create({
     color: 'white',
     textAlign: 'center',
 
-  },
-  background: {
-    flex: 1,
-    resizeMode: 'cover', // or 'stretch'
   },
 })
 

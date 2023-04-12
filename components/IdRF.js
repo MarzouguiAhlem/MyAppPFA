@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, TextInput, TouchableOpacity, StyleSheet, Text} from 'react-native';
 
-const Id = () => {
+const IdRF = () => {
   const [number, setNumber] = useState();
 
   const handleSubmit = () => {
@@ -15,7 +15,7 @@ const Id = () => {
         onChangeText={setNumber}
         value={number}
         style={styles.input}
-        placeholder="enter your ID"
+        placeholder="Enter your ID"
         placeholderTextColor="gray"
         color="white"
         required={true}
@@ -23,15 +23,16 @@ const Id = () => {
       
 
 <TouchableOpacity onPress={handleSubmit}
-  style={{borderRadius: 10,
+  style={{borderRadius: 6,
     backgroundColor: "#3498db",
     flexDirection: "row",
     justifyContent: "center",
-    padding: 10,
+    //padding: 10,
     height: 48,
     width: '80%',
     alignItems: 'center',
-    justifyContent: 'center',}
+    //justifyContent: 'center',
+  }
   }>
       <Text style={{ color: 'white', fontSize: 20 }}>Submit</Text>
   </TouchableOpacity>
@@ -48,13 +49,13 @@ const styles = StyleSheet.create({
       },
     input: {
       width: '80%',
-      height: 48,
+      height: 58,
       borderWidth: 1,
       borderColor: '#c2bccf',
-      borderRadius: 4,
-      paddingLeft: 16,
-      marginBottom: 16,
+      borderRadius: 6,
+      paddingLeft: 20,
+      marginBottom:15,
     },
   });
 
-export default Id;
+export default IdRF;

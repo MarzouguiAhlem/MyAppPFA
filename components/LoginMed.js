@@ -1,36 +1,35 @@
 import React, { useState } from 'react';
-import { TouchableOpacity, StyleSheet, Text, View, TextInput, ImageBackground } from 'react-native';
-import { RadioButton } from 'react-native-paper';
+import { TouchableOpacity, StyleSheet, Text, View, TextInput } from 'react-native';
 
 
-export default function LoginPage() {
+export default function LoginMed() {
   const [Email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [number, setNumber] = useState();
 
  
 
   const handleSubmit = () => {
-    if (Email === '' || password === '') {
-      alert('Please enter both email and password');} 
+    if (Email === '' || password === '' || number === '') {
+      alert('Please enter yor Email, Password and ID');} 
       else if (!/\S+@\S+\.\S+/.test(Email)) {
         alert('Please enter a valid email address');}
       else {alert('You are now connected!');
       console.log(Email);
-      console.log(password);}}
+      console.log(password);
+      console.log(number);}
+    }
   
-      const [checked, setChecked] = useState('');
+
 
   return (
-    <ImageBackground
-      style={styles.background}
-      source={require('./img/back11.jpg')}
-    >
+
 <View style={styles.container}>
       <Text style={styles.title}>Welcome back !</Text>
       <TextInput
         style={styles.input}
         placeholder="Email address"
-        placeholderTextColor="white"
+        placeholderTextColor="gray"
         value={Email}
         textContentType="emailAddress"
         onChangeText={setEmail}
@@ -41,22 +40,25 @@ export default function LoginPage() {
       <TextInput
         style={styles.input}
         placeholder="Password"
-        placeholderTextColor="white"
+        placeholderTextColor="gray"
         value={password}
         onChangeText={setPassword}
         secureTextEntry
         color="white"
         required={true}
       />
-
-<RadioButton.Group onValueChange={newValue => setChecked(newValue)} value={checked}>
-        <RadioButton.Item label="Patient" value="first" color={'white'} labelStyle={{color:'white', fontSize:18}}
-        uncheckedColor={'#e0e0e0'}/>
-        <RadioButton.Item label="Doctor" value="second" labelStyle={{color:'white', fontSize:18}} color={'white'}
-        uncheckedColor={'#e0e0e0'}/>
-  </RadioButton.Group>
       
-    
+      <TextInput
+        keyboardType="numeric"
+        onChangeText={setNumber}
+        value={number}
+        style={styles.input}
+        placeholder="enter your ID"
+        placeholderTextColor="gray"
+        color="white"
+        required={true}
+      />
+
 <TouchableOpacity onPress={handleSubmit} style={{borderRadius: 5,
     backgroundColor: "white",
     flexDirection: "row",
@@ -65,13 +67,13 @@ export default function LoginPage() {
     width: '25%',
     alignItems: 'center',
     justifyContent: 'center',
-    margin: 5,
+    margin: 35,
   }
   }>
       <Text style={{ color: '#14082b', fontSize: 18, fontWeight:'bold' }}>Login</Text>
   </TouchableOpacity>
-    </View>
-    </ImageBackground>
+  </View>
+
     
   );
 }
@@ -79,14 +81,14 @@ export default function LoginPage() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    //alignItems: 'center',
-    //justifyContent: 'center',
-    //backgroundColor: '#14082b',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#14082b',
   },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
-    margin: 10,
+    margin: 30,
     color: 'white',
   },
   input: {
@@ -96,11 +98,7 @@ const styles = StyleSheet.create({
     borderColor: 'white',
     borderRadius: 4,
     paddingLeft: 16,
-    margin: 5,
+    margin: 10,
   
-  },
-  background: {
-    flex: 1,
-    resizeMode: 'cover', // or 'stretch'
   },
 });

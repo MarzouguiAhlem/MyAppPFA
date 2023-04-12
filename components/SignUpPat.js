@@ -17,8 +17,6 @@ const SignUp = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Sign Up</Text>
-      <Text style={styles.regularText}> Please note that phone verification is required for signup.
-         Your number will only be used to verify your identity for security purposes</Text>
       <TextInput
         label="Name"
         value={name}
@@ -61,7 +59,7 @@ const SignUp = () => {
         color="white"
         required={true}
       />
-
+    
       <TouchableOpacity style={styles.button} mode="contained" onPress={handleSignup}>
         <Text style={styles.text}>Create Account</Text>
       </TouchableOpacity>
@@ -90,11 +88,6 @@ const styles = StyleSheet.create({
     height: 42,
     padding: 10,
     margin: 10,
-  },
-  regularText: {
-    fontSize: 16,
-    color: 'white',
-    textAlign: 'center',
   },
   button: {
     backgroundColor: '#2196F3',

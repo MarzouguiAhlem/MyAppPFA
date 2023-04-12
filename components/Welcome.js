@@ -1,17 +1,13 @@
 import React from 'react';
-import { View, Text, StyleSheet, Pressable, TouchableOpacity, ImageBackground} from 'react-native';
+import { View, Text, StyleSheet, Pressable, TouchableOpacity } from 'react-native';
 
 
 export default function Welcome({onPress, onPressLeft, onPressRight}) {
   
   return (
-    <ImageBackground
-      style={styles.background}
-      source={require('./img/back12.jpg')}
-    >
      <View style={styles.container}>
       <Text style={styles.regularText}>
-      Welcome To MyHealthMate  ...
+      Welcome To My Health Mate Application
       </Text>
 
       <Pressable
@@ -33,8 +29,6 @@ export default function Welcome({onPress, onPressLeft, onPressRight}) {
     </Pressable> 
 
     <View style={styles.container1}>
-      
-  
       <TouchableOpacity onPress={onPressLeft} style={styles.button}>
         <Text style={styles.text}>Log In</Text>
       </TouchableOpacity>
@@ -42,12 +36,8 @@ export default function Welcome({onPress, onPressLeft, onPressRight}) {
         <Text style={styles.text}>Sign Up</Text>
       </TouchableOpacity>
       
-    </View>  
-    
+    </View>   
     </View>
-       
-    </ImageBackground>
-   
   );
   
 }
@@ -56,19 +46,20 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    
+    backgroundColor: '#14082b',
   },
   container1: {
     flex: 0.2,
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'row',
+    backgroundColor: '#14082b'
   },
   regularText: {
     fontSize: 24,
     padding: 20,
-    marginVertical: 8,
-    color: '#14082b',
+    marginVertical: 40,
+    color: 'white',
     textAlign: 'center',
   },
   button: {
@@ -77,7 +68,7 @@ const styles = StyleSheet.create({
     padding: 8,
     margin: 8,
     height: 45,
-    width: '25%',
+    width: '26%',
     //borderWidth: 2,
     //borderColor: '#c2bccf',
   },
@@ -85,9 +76,5 @@ const styles = StyleSheet.create({
     color: 'white',
     textAlign: 'center',
     fontSize: 18,
-  },
-  background: {
-    flex: 1,
-    resizeMode: 'cover', // or 'stretch'
   },
 });

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { View, Text, FlatList, TextInput, Pressable, ImageBackground } from 'react-native';
+import { View, Text, FlatList, TextInput, Pressable } from 'react-native';
 
-const ChatBox1 = () => {
+const ChatboxPat = () => {
   const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState('');
 
@@ -11,9 +11,7 @@ const ChatBox1 = () => {
   };
 
   return (
-    <ImageBackground style={{flex: 1, resizeMode: 'cover'}}
-    source={require('./img/doc.webp')} >
-    <View style={{ flex: 1 }}>
+    <View style={{ flex: 1, backgroundColor:'white' }}>
     <FlatList
       data={messages}
       renderItem={({ item }) => (
@@ -34,10 +32,8 @@ const ChatBox1 = () => {
       
     </View>
   </View>
-    
-    </ImageBackground>
    
   );
 };
 
-export default ChatBox1;
+export default ChatboxPat;

@@ -1,12 +1,11 @@
 import React from 'react';
-import { View, Text, StyleSheet, FlatList, TouchableOpacity, ImageBackground} from 'react-native';
+import { View, Text, StyleSheet, FlatList, TouchableOpacity } from 'react-native';
 
 
 export default function Liste  () {
   
   const Items = [{name:'Basic information'}, {name:'Diseases'}, {name:'Allergies'}, {name:'Vaccination'}, 
-  {name:'Specialties'},{name:'Doctors'},{name:'Instuctions to follow'},{name:'Medicines'},
-  {name:'Files importation'},{name:'ChatBox'},{name:'Logout'},];
+  {name:'Specialties'},{name:'Doctors'},{name:'Medications'},{name:'ChatBox'},{name:'Logout'},];
 
   const renderItem = ({ item }) => <Item name={item.name} />;
   
@@ -18,22 +17,14 @@ export default function Liste  () {
     </View>
   );
   return (
-    <ImageBackground
-      style={menuStyles.background}
-      source={require('./img/back7.jpg')}
-    >
       <View style={menuStyles.container}>
       <FlatList
         data={Items}
         renderItem={renderItem}>
       </FlatList>
     </View>
-    </ImageBackground>
-    
   );
 };
-
-
 const menuStyles = StyleSheet.create({
   container: {
     flex: 1,
@@ -59,9 +50,5 @@ const menuStyles = StyleSheet.create({
     marginHorizontal: 10,
     borderWidth: 2,
     borderColor: 'white',
-  },
-  background: {
-    flex: 1,
-    resizeMode: 'cover', // or 'stretch'
   },
 });;

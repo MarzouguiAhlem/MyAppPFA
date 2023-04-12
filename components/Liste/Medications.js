@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, StyleSheet, FlatList,ImageBackground } from 'react-native';
 
-function Input() {
+function Medications() {
   const [messages, setMessages] = useState([]);
   const [text, setText] = useState('');
 
@@ -82,4 +82,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Input;
+export default Medications;
